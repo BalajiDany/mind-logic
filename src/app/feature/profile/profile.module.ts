@@ -8,6 +8,8 @@ import { PersonalInfoComponent } from './personal-info/personal-info.component';
 import { GeneralInfoComponent } from './general-info/general-info.component';
 import { PreferencesInfoComponent } from './preferences-info/preferences-info.component';
 import { BaseModule } from 'src/app/component/base.module';
+import { ChangePasswordComponent } from './personal-info/change-password/change-password.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,12 +17,14 @@ import { BaseModule } from 'src/app/component/base.module';
     PersonalInfoComponent,
     GeneralInfoComponent,
     PreferencesInfoComponent,
+    ChangePasswordComponent,
   ],
   imports: [
     CommonModule,
     ProfileRoutingModule,
     NgbNavModule,
     BaseModule,
+    FormsModule,
   ],
   providers: [
     TitleService,

@@ -14,6 +14,7 @@ import { ClipboardModule } from '@angular/cdk/clipboard'
   ],
   exports: [
     SimpleEditFieldComponent,
+    CustomSvgComponent,
   ]
 })
 export class BaseModule { }
