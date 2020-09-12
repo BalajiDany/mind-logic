@@ -1,21 +1,21 @@
 <div class='text-center'>
-    <div class="d-inline-block text-left overview-content">
+    <div class="d-inline-block text-left overview-content" *ngIf="(profileData$ | async) as profileData">
         <h4 class="d-inline-block text-secondary py-2">Overview</h4>
         <h5 *ngIf="changesSaved" class="d-inline-block text-success p-2">Changes Saved</h5>
         <app-simple-edit-field label="Title" fieldName="title" placeholder="Add a title" icon="person-fill"
-            (onAccept)="onFieldChange($event)">
+            (onAccept)="onFieldChange($event)" [fieldValue]="profileData.title">
         </app-simple-edit-field>
         <app-simple-edit-field label="Email" fieldName="email" placeholder="Add a email" icon="envelope-fill"
-            [enableCopy]='true' (onAccept)="onFieldChange($event)">
+            [enableCopy]='true' (onAccept)="onFieldChange($event)" [fieldValue]="profileData.email">
         </app-simple-edit-field>
         <app-simple-edit-field label="Phone" fieldName="phone" placeholder="Add a phone number" icon="telephone-fill"
-            (onAccept)="onFieldChange($event)">
+            (onAccept)="onFieldChange($event)" [fieldValue]="profileData.phone">
         </app-simple-edit-field>
         <app-simple-edit-field label="Location" fieldName="location" placeholder="Add a location" icon="geo-alt-fill"
-            (onAccept)="onFieldChange($event)">
+            (onAccept)="onFieldChange($event)" [fieldValue]="profileData.location">
         </app-simple-edit-field>
         <app-simple-edit-field label="Timezone" fieldName="timezone" placeholder="Add a timezone" icon="clock-fill"
-            [enableCopy]='true' (onAccept)="onFieldChange($event)">
+            [enableCopy]='true' (onAccept)="onFieldChange($event)" [fieldValue]="profileData.timezone">
         </app-simple-edit-field>
         <hr>
     </div>
@@ -23,6 +23,6 @@
 <div class='text-center mb-4'>
     <div class="d-inline-block overview-content">
         <app-change-password></app-change-password>
-        <button type="button" class="save-button btn btn-primary float-right">Save Changes</button>
+        <button type="button" class="save-button btn btn-primary float-right" (click)="onSaveButtonClick()">Save Changes</button>
     </div>
 </div>

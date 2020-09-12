@@ -10,6 +10,7 @@ import { PreferencesInfoComponent } from './preferences-info/preferences-info.co
 import { BaseModule } from 'src/app/component/base.module';
 import { ChangePasswordComponent } from './personal-info/change-password/change-password.component';
 import { FormsModule } from '@angular/forms';
+import { ProfileService } from './services/profile.service';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { FormsModule } from '@angular/forms';
   ],
   providers: [
     TitleService,
+    ProfileService,
   ]
 })
 export class ProfileModule { }

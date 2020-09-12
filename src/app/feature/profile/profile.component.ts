@@ -8,13 +8,13 @@ import { TitleService } from '../services/title.service';
 })
 export class ProfileComponent implements OnInit, AfterViewInit {
 
-  active = 1;
+  
+  activeTabIndex: number = 1;
   constructor(
     private titleService: TitleService,
   ) { }
 
   ngOnInit(): void {
-
   }
 
   ngAfterViewInit(): void {

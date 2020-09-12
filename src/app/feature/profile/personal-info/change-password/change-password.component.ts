@@ -63,7 +63,6 @@ export class ChangePasswordComponent implements OnInit {
       .filter(({ condition }) => condition(password))
       .map(({ reward }) => reward || 0)
       .forEach(reward => strength += reward);
-    console.log(password, strength);
     return strength;
   }
 
