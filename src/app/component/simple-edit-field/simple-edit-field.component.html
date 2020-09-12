@@ -1,18 +1,24 @@
-<div class="simple-edit-field d-inline-block p-2 m-auto">
-    <div class="d-flex align-items-center">
-        <label [for]="fieldName" class="input-label text-truncat">{{ label }}</label>
-        <div class="input-field medium-size">
-            <input [(ngModel)]="fieldValue" [type]="fieldType" class="form-control" [id]="fieldName" [placeholder]="placeholder" [disabled]="!enableEdit">
-        </div>
-        <div class="edit-icon field-icon" (click)="onEditIconClick()" [ngClass]="{'d-none': enableEdit }">
-            <app-custom-svg icon="pencil" size="1.2"></app-custom-svg>
-        </div>
-        <div class="reject-icon field-icon" (click)="onCloseClick()" [ngClass]="{'d-none': !enableEdit }">
-            <app-custom-svg icon="x-circle-fill" size="1.2"></app-custom-svg>
-        </div>
-        <div class="accept-icon field-icon" (click)="onAcceptClick()" [ngClass]="{'d-none': !enableEdit }">
-            <app-custom-svg icon="check-circle-fill" size="1.2"></app-custom-svg>
+<div class="py-1 text-left">
+    <div *ngIf="icon" class="d-inline-block mx-2 p-1 border border-primary rounded-circle">
+        <app-custom-svg [icon]="icon" size="1.6"></app-custom-svg>
+    </div>
+    <div class="simple-edit-field d-inline-block p-2 m-auto">
+        <div class="d-flex align-items-center">
+            <label [for]="fieldName" class="input-label">{{ label }}</label>
+            <div class="input-field medium-size position-relative mr-2">
+                <input [(ngModel)]="fieldValue" [type]="fieldType" class="form-control" [id]="fieldName"
+                    [placeholder]="placeholder" [disabled]="!enableEdit">
+                <app-custom-svg class="copy-icon field-icon position-absolute" *ngIf="enableCopy && !enableEdit" [cdkCopyToClipboard]="fieldValue" icon="clipboard-plus" size="1.2"></app-custom-svg>
+            </div>
+            <div class="edit-icon field-icon" (click)="onEditIconClick()" [ngClass]="{'d-none': enableEdit }">
+                <app-custom-svg icon="pencil" size="1.2"></app-custom-svg>
+            </div>
+            <div class="field-icon" (click)="onCloseClick()" [ngClass]="{'d-none': !enableEdit }">
+                <app-custom-svg icon="x-circle-fill" size="1.2"></app-custom-svg>
+            </div>
+            <div class="field-icon" (click)="onAcceptClick()" [ngClass]="{'d-none': !enableEdit }">
+                <app-custom-svg icon="check-circle-fill" size="1.2"></app-custom-svg>
+            </div>
         </div>
     </div>
 </div>
-

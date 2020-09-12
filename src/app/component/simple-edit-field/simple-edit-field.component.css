@@ -17,7 +17,7 @@
 }
 
 .input-label {
-    width: 150px;
+    width: 100px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -26,4 +26,9 @@
 
 .medium-size {
     width: 400px;
+}
+
+.copy-icon {
+    right: 6px;
+    top: 6px;
 }

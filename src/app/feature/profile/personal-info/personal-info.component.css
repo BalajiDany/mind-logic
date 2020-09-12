@@ -1,0 +1,33 @@
+
+.overview-content {
+    width: 650px;
+}
+
+
+.input-label {
+    width: 158px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 0 !important;
+}
+
+.medium-size {
+    width: 400px;
+}
+
+.save-button {
+    margin-right: 90px;
+}
+
+.password-field {
+    border-radius: 19px;
+    letter-spacing: 4px;
+}
+
+.password-strength {
+    float: right;
+    position: absolute;
+    right: 10px;
+    top: 6px;
+}

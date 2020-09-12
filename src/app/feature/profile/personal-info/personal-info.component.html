@@ -1,5 +1,48 @@
-<app-simple-edit-field label="Title" placeholder="Add a title"></app-simple-edit-field>
-<app-simple-edit-field label="Email" placeholder="sjayakumar@klasd.com"></app-simple-edit-field>
-<app-simple-edit-field label="Phone" placeholder="Add a phone number"></app-simple-edit-field>
-<app-simple-edit-field label="Location" placeholder="Add a location"></app-simple-edit-field>
-<app-simple-edit-field label="Timezone" placeholder="(GMT +05:00) Ekaterinburg"></app-simple-edit-field>
+<div class='text-center'>
+    <div class="d-inline-block text-left overview-content">
+        <h4 class="d-inline-block text-secondary py-2">Overview</h4>
+        <h5 class="d-inline-block text-success p-2">Changes Saved</h5>
+        <app-simple-edit-field label="Title" placeholder="Add a title" icon="person-fill">
+        </app-simple-edit-field>
+        <app-simple-edit-field label="Email" placeholder="sjayakumar@klasd.com" icon="envelope-fill"
+            [enableCopy]='true'>
+        </app-simple-edit-field>
+        <app-simple-edit-field label="Phone" placeholder="Add a phone number" icon="telephone-fill">
+        </app-simple-edit-field>
+        <app-simple-edit-field label="Location" placeholder="Add a location" icon="geo-alt-fill">
+        </app-simple-edit-field>
+        <app-simple-edit-field label="Timezone" placeholder="(GMT +05:00) Ekaterinburg" icon="clock-fill"
+            [enableCopy]='true'>
+        </app-simple-edit-field>
+        <hr>
+    </div>
+</div>
+
+<div class='text-center mb-4'>
+    <div class="d-inline-block overview-content">
+        <h4 class="text-left text-secondary py-2">Change your password</h4>
+        <div class="d-flex align-items-center pt-3">
+            <label for="currentPasswordField" class="input-label text-truncat text-left">Current Password</label>
+            <div class="input-field medium-size position-relative">
+                <input [(ngModel)]="fieldValue" type="password" class="form-control password-field" id="currentPasswordField">
+            </div>
+        </div>
+        <div class="d-flex align-items-center pt-4">
+            <label for="newPasswordField" class="input-label text-truncat text-left">New Password</label>
+            <div class="input-field medium-size position-relative">
+                <input [(ngModel)]="fieldValue" type="password" class="form-control password-field" id="newPasswordField">
+                <div class="password-strength font-weight-bold">
+                    <span class="text-danger">20</span> / <span class="text-success">100</span>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex align-items-center pt-4 pb-3">
+            <label for="retypePasswordField" class="input-label text-truncat text-left">Re-type Password</label>
+            <div class="input-field medium-size position-relative">
+                <input [(ngModel)]="fieldValue" type="password" class="form-control password-field" id="retypePasswordField">
+            </div>
+        </div>
+        <br>
+        <button type="button" class="save-button btn btn-primary float-right">Save Changes</button>
+    </div>
+</div>
