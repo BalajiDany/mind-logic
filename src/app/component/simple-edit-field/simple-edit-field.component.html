@@ -8,7 +8,7 @@
             <div class="input-field medium-size position-relative mr-2">
                 <input [(ngModel)]="fieldValue" [type]="fieldType" class="form-control" [id]="fieldName"
                     [placeholder]="placeholder" [disabled]="!enableEdit">
-                <app-custom-svg class="copy-icon field-icon position-absolute" *ngIf="enableCopy && !enableEdit" [cdkCopyToClipboard]="fieldValue" icon="clipboard-plus" size="1.2"></app-custom-svg>
+                <app-custom-svg class="copy-icon field-icon position-absolute" (click)="onCopyIconClick()" *ngIf="enableCopy && !enableEdit" [cdkCopyToClipboard]="fieldValue" icon="clipboard-plus" size="1.2"></app-custom-svg>
             </div>
             <div class="edit-icon field-icon" (click)="onEditIconClick()" [ngClass]="{'d-none': enableEdit }">
                 <app-custom-svg icon="pencil" size="1.2"></app-custom-svg>

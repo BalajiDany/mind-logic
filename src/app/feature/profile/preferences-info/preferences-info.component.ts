@@ -5,11 +5,6 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './preferences-info.component.html',
   styleUrls: ['./preferences-info.component.css']
 })
-export class PreferencesInfoComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+export class PreferencesInfoComponent {
 
 }

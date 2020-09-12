@@ -11,7 +11,6 @@ img.header-profile-image {
 .custom-nav-item.active {
     color: #ffc107 !important;
     border-color: #ffc107 !important; 
-    /* Try to import form bootstrap */
 }
 
 .custom-nav-item:hover {

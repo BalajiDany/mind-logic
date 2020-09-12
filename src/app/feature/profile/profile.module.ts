@@ -11,6 +11,7 @@ import { BaseModule } from 'src/app/component/base.module';
 import { ChangePasswordComponent } from './personal-info/change-password/change-password.component';
 import { FormsModule } from '@angular/forms';
 import { ProfileService } from './services/profile.service';
+import { ToasterService } from 'src/app/component/custom-toaster/services/toaster.service';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { ProfileService } from './services/profile.service';
   providers: [
     TitleService,
     ProfileService,
+    ToasterService,
   ]
 })
 export class ProfileModule { }

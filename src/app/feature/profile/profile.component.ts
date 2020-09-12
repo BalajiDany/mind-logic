@@ -6,16 +6,13 @@ import { TitleService } from '../services/title.service';
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css']
 })
-export class ProfileComponent implements OnInit, AfterViewInit {
+export class ProfileComponent implements AfterViewInit {
 
   
   activeTabIndex: number = 1;
   constructor(
     private titleService: TitleService,
   ) { }
-
-  ngOnInit(): void {
-  }
 
   ngAfterViewInit(): void {
     this.titleService.changeTitle('Profile');

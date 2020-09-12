@@ -5,7 +5,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   templateUrl: './simple-edit-field.component.html',
   styleUrls: ['./simple-edit-field.component.css']
 })
-export class SimpleEditFieldComponent implements OnInit {
+export class SimpleEditFieldComponent {
 
   @Input() label: string;
   @Input() placeholder: string = '';
@@ -23,9 +23,9 @@ export class SimpleEditFieldComponent implements OnInit {
 
   private previousValue: string;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  onCopyIconClick(): void {
+    const snapshot = this.getSnapshot();
+    this.onCopy.emit({ ...snapshot });
   }
 
   onEditIconClick(): void {
@@ -52,6 +52,7 @@ export class SimpleEditFieldComponent implements OnInit {
     return {
       fieldName: this.fieldName,
       fieldValue: this.fieldValue,
+      fieldLabel: this.label,
     }
   }
 }

@@ -5,15 +5,9 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './custom-svg.component.html',
   styleUrls: ['./custom-svg.component.css']
 })
-export class CustomSvgComponent implements OnInit {
-
+export class CustomSvgComponent {
 
   @Input() icon: string;
   @Input() size: string = '1.2em';
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

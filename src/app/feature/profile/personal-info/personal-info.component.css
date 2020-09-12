@@ -5,3 +5,9 @@
 .save-button {
     margin-right: 90px;
 }
+
+.custom-toaster {
+    bottom: 0 !important;
+    right: 16px !important;
+    top: unset !important;
+}

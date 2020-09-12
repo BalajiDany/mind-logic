@@ -6,7 +6,7 @@
             (onAccept)="onFieldChange($event)" [fieldValue]="profileData.title">
         </app-simple-edit-field>
         <app-simple-edit-field label="Email" fieldName="email" placeholder="Add a email" icon="envelope-fill"
-            [enableCopy]='true' (onAccept)="onFieldChange($event)" [fieldValue]="profileData.email">
+            [enableCopy]='true' (onCopy)="onFieldCopied($event)" (onAccept)="onFieldChange($event)" [fieldValue]="profileData.email">
         </app-simple-edit-field>
         <app-simple-edit-field label="Phone" fieldName="phone" placeholder="Add a phone number" icon="telephone-fill"
             (onAccept)="onFieldChange($event)" [fieldValue]="profileData.phone">
@@ -15,7 +15,7 @@
             (onAccept)="onFieldChange($event)" [fieldValue]="profileData.location">
         </app-simple-edit-field>
         <app-simple-edit-field label="Timezone" fieldName="timezone" placeholder="Add a timezone" icon="clock-fill"
-            [enableCopy]='true' (onAccept)="onFieldChange($event)" [fieldValue]="profileData.timezone">
+            [enableCopy]='true' (onCopy)="onFieldCopied($event)" (onAccept)="onFieldChange($event)" [fieldValue]="profileData.timezone">
         </app-simple-edit-field>
         <hr>
     </div>
@@ -26,3 +26,6 @@
         <button type="button" class="save-button btn btn-primary float-right" (click)="onSaveButtonClick()">Save Changes</button>
     </div>
 </div>
+
+<app-custom-toaster class="custom-toaster" aria-live="polite" aria-atomic="true"></app-custom-toaster>
+
