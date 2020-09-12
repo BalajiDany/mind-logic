@@ -1,0 +1,29 @@
+<!-- Header -->
+<div class="bg-primary pt-4 text-center text-light">
+    <img src="assets/profile/profile.png" class="header-profile-image rounded-circle" />
+    <h6 class="text-light mt-2 mb-4">Pranav Mistry</h6>
+    <ul ngbNav #navBar="ngbNav" [(activeId)]="active" class="nav-tabs border-0 justify-content-between w-50 m-auto">
+        <li [ngbNavItem]="1">
+            <a  ngbNavLink class="custom-nav-item text-light">Personal Info</a>
+            <ng-template ngbNavContent>
+                <app-personal-info></app-personal-info>
+            </ng-template>
+        </li>
+        <li [ngbNavItem]="2">
+            <a ngbNavLink class="custom-nav-item text-light">General</a>
+            <ng-template ngbNavContent>
+                <app-general-info></app-general-info>
+            </ng-template>
+        </li>
+        <li [ngbNavItem]="3">
+            <a ngbNavLink class="custom-nav-item text-light">Preferences</a>
+            <ng-template ngbNavContent>
+                <app-preferences-info></app-preferences-info>
+            </ng-template>
+        </li>
+    </ul>
+</div>
+
+<div [ngbNavOutlet]="navBar" class="mt-2"></div>
+
+<!-- Tabs -->

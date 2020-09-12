@@ -1,0 +1,19 @@
+img.header-profile-image {
+    height: 100px;
+    width: 100px;
+}
+
+.custom-nav-item {
+    border-width: 0 0 3px 0 !important;
+    background: none !important;
+}
+
+.custom-nav-item.active {
+    color: #ffc107 !important;
+    border-color: #ffc107 !important; 
+    /* Try to import form bootstrap */
+}
+
+.custom-nav-item:hover {
+    border-color: rgba(0, 0, 0, 0) !important;
+}

@@ -1,0 +1,29 @@
+
+.simple-edit-field:hover {
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' stroke='%23007bff' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke-width='2' stroke-dasharray='8%2c 8' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+    border-color: #007bff!important;
+}
+
+.simple-edit-field:hover .edit-icon {
+    visibility: visible;
+}
+
+.edit-icon {
+    visibility: hidden;
+}
+
+.field-icon {
+    cursor: pointer;
+}
+
+.input-label {
+    width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 0 !important;
+}
+
+.medium-size {
+    width: 400px;
+}
