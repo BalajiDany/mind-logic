@@ -1,5 +1,5 @@
 <div class='text-center'>
-    <div class="d-inline-block text-left overview-content" *ngIf="(profileData$ | async) as profileData">
+    <div class="d-inline-block text-left overview-content ml-5" *ngIf="(profileData$ | async) as profileData">
         <h4 class="d-inline-block text-secondary py-2">Overview</h4>
         <h5 *ngIf="changesSaved" class="d-inline-block text-success p-2">Changes Saved</h5>
         <app-simple-edit-field label="Title" fieldName="title" placeholder="Add a title" icon="person-fill"
@@ -20,7 +20,7 @@
         <hr>
     </div>
 </div>
-<div class='text-center mb-4'>
+<div class='text-center mb-4 ml-5'>
     <div class="d-inline-block overview-content">
         <app-change-password></app-change-password>
         <button type="button" class="save-button btn btn-primary float-right" (click)="onSaveButtonClick()">Save Changes</button>
