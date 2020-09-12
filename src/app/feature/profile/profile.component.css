@@ -16,3 +16,7 @@ img.header-profile-image {
 .custom-nav-item:hover {
     border-color: rgba(0, 0, 0, 0) !important;
 }
+
+.nav-tabs {
+    max-width: 600px;
+}
